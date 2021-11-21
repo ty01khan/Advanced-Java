@@ -1,0 +1,22 @@
+@charset "UTF-8";
+body {
+    background-image: url('background_image.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    place-items: center;
+}
+.eid.notunique, .username.notunique, .invalid-age.unmatched, 
+.phone-error.unmatched, .error-text.unmatched, .email.notunique{
+    color: red;
+}
+.eid.unique, .username.unique, .invalid-age.matched, 
+.phone-error.matched, .email.unique {
+    color: #588C64;
+}
+.error-text.matched{
+    background: #D4EDDA;
+    color: #588C64;
+    border-color: #C3E6CB;
+    text-align: center;
+}

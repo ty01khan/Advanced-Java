@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Patternfly Curd Demo</title>
+</head>
+<body>
+	<form action = "SaveServlet" method = "post">
+		<table>
+			<tr><td>Name:</td><td><input type = "text" name = "name"></td></tr>
+			<tr><td>Age:</td><td><input type = "text" name = "age"></td></tr>
+			<tr><td>City:</td><td>
+			<select name = "city" style = "width:150px">
+				<option>Delhi</option>
+				<option>Noida</option>
+				<option>Raiput</option>
+				<option>Bhopal</option>
+			</select>
+			</td></tr>
+			<tr><td colspan = "2"><input type = "submit" value = "Save" /></td></tr>
+		</table>
+	</form>
+	<br/>
+	<a href = "ViewServlet">View Student</a>
+</body>
+</html>

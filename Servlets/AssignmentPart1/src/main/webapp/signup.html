@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Signup Page</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="script.js" type="text/javascript"></script>
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {
+	background-image: url('image/background_image.jpeg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	height: 100%;
+}
+
+html {
+	height: 100%;
+}
+
+.eid.notunique, .username.notunique, .invalid-age.unmatched,
+	.phone-error.unmatched, .error-text.unmatched, .email.notunique,
+	.isValidPass.no {
+	color: red;
+}
+
+.isValidPass {
+	color: red;
+	font-size: 12px;
+}
+
+.eid.unique, .username.unique, .invalid-age.matched, .phone-error.matched,
+	.email.unique, .error-text.matched, .isValidPass.yes {
+	color: #588C64;
+}
+
+.filled.not {
+	color: red;
+	border-color: #C3E6CB;
+	text-align: center;
+}
+</style>
+</head>
+
+<body>
+	<div class="row align-items-center">
+		<div
+			class="container jumbotron text-dark border border-primary border-5 rounded bg-light my-sm-2 my-md-3 my-lg-4 my-xl-5 pt-8 pb-4 px-8 col-sm-6 col-md-8 col-lg-5 col-xl-4">
+			<div class="text-center mb-4">
+				<h1>Create your account</h1>
+			</div>
+			<form class="was-validated" enctype="multipart/form-data" method="post" action="Signup">
+				<div class="form-group">
+					<label for="name"><b>Name:</b></label> <input type="text"
+						class="form-control" id="name" placeholder="Enter your name"
+						name="name" required>
+					<div class="invalid-feedback">Please fill out this field.</div>
+				</div>
+				<div class="form-group">
+					<label for="uname"><b>Username:</b></label> <input type="text"
+						class="form-control" id="uname" placeholder="Create an unique username"
+						name="uname" required>
+					<div class="invalid-feedback">Please fill out this field.</div>
+				</div>
+				<div class="form-group">
+					<label for="phone"><b>Contact Number:</b></label> <input type="tel"
+						class="form-control" id="phone" placeholder="Enter phone number"
+						name="phone" required>
+					<div class="phone-error"></div>
+					<div class="invalid-feedback">Please fill out this field.</div>
+				</div>
+				<div class="form-group">
+					<label for="eid"><b>Employee ID:</b></label> <input type="number"
+						class="form-control" id="eid" placeholder="Enter employee id"
+						name="eid" required>
+					<div class="eid"></div>
+					<div class="invalid-feedback">Please fill out this field.</div>
+				</div>
+				<div class="form-group">
+					<label for="address"><b>Address:</b></label> <input type="text"
+						class="form-control" id="address" name="address"
+						placeholder="Enter nearest landmark and town" name="eid" required>
+					<div class="invalid-feedback">Please fill out this field.</div>
+				</div>
+				<br>
+				<div class="mb-3" id="gender">
+					<label><b>Gender: </b></label> <label class="radio-inline">
+						<input type="radio" id="male" name="gender" value="Male" checked>Male
+					</label> <label class="radio-inline"> <input type="radio"
+						id="female" name="gender" value="Female">Female
+					</label> <label class="radio-inline"> <input type="radio"
+						id="other" name="gender" value="Other">Other
+					</label>
+				</div>
+				<div class="dropdown mb-3">
+					<label><b>Language:</b></label> <select id="lang" name="lang"
+						class="form-control">
+						<option>English</option>
+						<option>Hindi</option>
+					</select>
+				</div>
+				<div class="custom-file-upload">
+					<label for="profilepic"><b>Upload profile image:</b></label> <input
+						id="profilepic" class="form-control" name="profilepic" type="file"
+						required>
+				</div>
+				<br>
+				<div class="form-group">
+					<label for="dob"><b>Date of Birth:</b></label> <input id="dob"
+						type="date" name="dob" required>
+					<!-- <i class="fa fa-calendar"></i> -->
+					<div class="invalid-age"></div>
+					<div class="invalid-feedback">Please fill out this field.</div>
+				</div>
+				<div class="form-group">
+					<label for="email"><b>Email:</b></label>
+					<div>
+						<input type="email" class="form-control" id="email" name="email"
+							placeholder="email@domain.com" required>
+					</div>
+					<div class="email"></div>
+					<div class="invalid-feedback">Please fill out this field.</div>
+				</div>
+				<div class="form-group">
+					<label for="pass"><b>Password:</b></label>
+					<div>
+						<input type="password" class="form-control" id="pass" name="pass"
+							placeholder="Enter password" required>
+					</div>
+					<div class="isValidPass">
+						Password must follow the followings rule:
+						<ul>
+							<li>Should be aleast 8 characters long</li>
+							<li>Should contain atleast one Uppercase character (A-Z)</li>
+							<li>Should contain atleast one Lowercase character (a-z)</li>
+							<li>Should contain digit (0-9)</li>
+							<li>Shoud contains atleast one special character (@#$%&*)</li>
+						</ul>
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="cpass"><b>Confirm password:</b></label>
+					<div class="field">
+						<input type="password" class="form-control" id="cpass" name="cpass"
+							placeholder="Re-enter password" required>
+					</div>
+				</div>
+				<div class="filled float-right"></div>
+				<div class="error-text"></div>
+				
+				<div class="form-group mt-5">
+					<input type="submit"
+						class="form-group btn btn-primary btn-block" value = "SignUp">
+				</div>
+			</form>
+			<form>
+				<div class="text-center mt-4">
+					Already have an account? <a href="loginpage.html">Sign in here!</a>
+				</div>
+			</form>
+		</div>
+	</div>
+</body>
+</html>

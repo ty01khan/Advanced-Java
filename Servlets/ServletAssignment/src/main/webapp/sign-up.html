@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Sign-up Page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="script.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="sign-up.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+        body {
+            background-image: url('background_image.jpeg');
+            background-color: #e5e887;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            place-items: center;
+    </style>
+</head>
+
+<body>
+    <div
+        class="container jumbotron text-dark border border-primary border-5 rounded bg-light mt-sm-2 mt-md-3 mt-lg-4 mt-xl-5 pt-8 pb-4 px-8 col-sm-8 col-md-8 col-lg-5 col-xl-4">
+        <div class="text-center mb-4">
+            <h2>Create your PatternFly account</h2>
+        </div>
+
+        <form action = "Signup" method = "post" enctype ="multipart/form-data">
+            <div class="form-group">
+                <label for="firstname">Name</label>
+                <input type="text" class="form-control" name="name" placeholder="Enter Name" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone number</label>
+                <input type="number" class="form-control" name="phone-number" placeholder="Enter your phone number"
+                    required>
+            </div>
+            <div class="form-group">
+                <label for="address">Name</label>
+                <input type="text" class="form-control" name="address" placeholder="Enter address" required>
+            </div>
+            <div class="form-group">
+                <label for="EID">Employee ID</label>
+                <input type="number" class="form-control" name="EID" placeholder="Enter your Employee ID" required>
+            </div>
+            <div class="form-group">
+                <label for="gender">Gender</label>
+                <select class="form-control" name="gender">
+                    <option>Female</option>
+                    <option>Male</option>
+                    <option>Other</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="Language">Language</label>
+                <select class="form-control" name="Language">
+                    <option>English</option>
+                    <option>Hindi</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="profilepic">Upload Profile pic</label>
+                <input type="file" class="form-control-file" name="profilepic">
+            </div>
+            <div>
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob">
+            </div>
+            <div>
+                <label for="email">Email address</label>
+                <input type="email" class="form-control" name="email" aria-describedby="emailHelp"
+                    placeholder="Enter email">
+            </div>
+            <div class="form-group">
+                <label class="control-label">Password</label>
+                <input type="password" class="form-control" name="pass" data-bv-identical="true"
+                    data-bv-identical-field="confirmPassword"
+                    data-bv-identical-message="The password and its confirm are not the same" />
+            </div>
+
+            <div class="form-group">
+                <label for = "cpass" class="control-label">Retype password</label>
+                <input type="password" class="form-control" name="cpass"/>
+            </div>
+            <div class="form-group form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">Agree</label>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+</body>
+
+</html>

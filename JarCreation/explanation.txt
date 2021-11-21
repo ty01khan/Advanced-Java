@@ -1,0 +1,14 @@
+#Creating an executable JAR file using jar command:
+	i. Create a JAVA project and create a class having main method printing HelloWorld. (Suppose java class is Main.java)
+	ii. Run the project which will result in creating a class file. (Created class would be Main.class)
+	iii. Now go to the directory where class file is present and open the terminal (or command prompt).
+	iv. Now run the following commands:
+    	a. jar -cvfe JARFileName MainClassName ClassFileName  (eg: jar -cvfe HelloWorld.jar Main Main.class) ---it will create a jar file
+		b. java -jar HelloWorld.jar  --- it will run the jar file and output the same string that main method had.
+		
+
+#Creating an executable JAR file by creating a maven project:
+	i. Create a maven project with archetype quickstart.
+	ii. This maven will already has an app.java file which has main method printing HelloWorld.
+	iii. Now right click on the project and click on export. Then select JAVA on wizard section and click on RunnableJARfile.
+	iv. Your JAR file is created. Now run the JAR file using "java -jar HelloWorld.jar" command.
